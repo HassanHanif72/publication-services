@@ -1,95 +1,146 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import GlobalBtn from "./components/GlobalBtn";
+import Faqs from "./components/Faqs";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      {/* top banner */}
+      <section className="top-banner">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-xl-8 col-lg-6 col-md-8">
+              <div className="right-col">
+                <h1>World's Leading Journal <span>Publication Service</span></h1>
+                <p>Eu a pellentesque neque at. Tortor nullam placerat eget gravida scelerisque
+                  consequat. A mi urna nulla aliquet erat dolor massa volutpat viverra. a pellentes.</p>
+                <GlobalBtn />
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* end */}
+      {/* top bottom */}
+      <section className="top-bottom-sec">
+        <div className="container">
+          <div className="row justify-content-end">
+            <div className="col-xl-8 col-lg-8 col-md-12">
+              <div className="top-bottom-inner">
+                <div className="bottom-col">
+                  <div className="d-flex align-items-center gap-3 mb-3">
+                    <Image src="/assets/images/img-1.png" alt="" width={119} height={52} />
+                    <span>Connect Our Experts</span>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra tortor eget
+                    lacus ullamcorper.</p>
+                </div>
+                <div className="bottom-col">
+                  <div className="d-flex align-items-center gap-3 mb-3">
+                    <Image src="/assets/images/clutch-logo.png" alt="" width={119} height={52} />
+                    <span>4.9 / 5</span>
+                  </div>
+                  <p>Dolor sit amet, consectetur adipiscing elit. Phasellus pharetra tortor eget lacus
+                    ullamcorper.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end */}
+      {/* sec three */}
+      <section className="sec-three">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-5 col-lg-5 col-md-5">
+              <div className="left-col">
+                <h2>Lorem ipsum dolor sit amet <span>Consectetur Rearmet</span> partur traiger</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra tortor eget lacus
+                  ullamcorper.Lorem ipsum dolor sit amet consectetur. Amet parturient elementum lobortis sit
+                  mauris blandit justo consectetur accumsan. Nulla mauris ut facilisis non non sit. Id
+                  fermentum cras sapien semper dui tempor. </p>
+                <div className="counter">
+                  <Image src="/assets/images/line.png" alt="" width={6} height={102} />
+                  <div className="mb-0">
+                    <span>150+</span>
+                    <p>Successful Projects Delivered</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-7 col-lg-7 col-md-7">
+              <div className="right-col">
+                <Image src="/assets/images/img-2.png" alt="" width={498} height={414} />
+                <div className="right-box-sec">
+                  <div className="right-box">
+                    <Image src="/assets/images/icon-1.png" alt="" width={20} height={20} />
+                    <p>Dolorsit amet conse
+                      Parturient elemoregbo
+                      Dolorsit amet conse
+                      Risk Management</p>
+                  </div>
+                  <button data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal" className="btn btn-theme-dark">Get Started <span><i className="ri-arrow-right-up-line"></i></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end */}
+      {/* sec four */}
+      <section className="sec-four">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-xl-8 col-lg-8 col-md-8">
+              <div className="section-title">
+                <h3>With a 98% client <span>satisfaction,</span> Lorem ipsum dolor sit amet
+                  50M+ Partut Traiger</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pharetra tortor eget lacus
+                  ullamcorper.Lorem ipsum dolor sit amet consectetur. Amet parturient elementum.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row justify-content-center g-3">
+            <div className="col-xl-3 col-lg-3 col-md-6">
+              <div className="sec-four-box">
+                <Image src="/assets/images/icon-2.png" alt="" width={60} height={60} />
+                <span>150+</span>
+                <p>Over 300+ clients complete high-
+                  impact projects.</p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6">
+              <div className="sec-four-box">
+                <Image src="/assets/images/icon-3.png" alt="" width={60} height={60} />
+                <span>98%</span>
+                <p>Over 300+ clients complete high-
+                  impact projects.</p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6">
+              <div className="sec-four-box">
+                <Image src="/assets/images/icon-4.png" alt="" width={60} height={60} />
+                <span>50+</span>
+                <p>Over 300+ clients complete high-
+                  impact projects.</p>
+              </div>
+            </div>
+            <div className="col-xl-3 col-lg-3 col-md-6">
+              <div className="sec-four-box">
+                <Image src="/assets/images/icon-5.png" alt="" width={60} height={60} />
+                <span>10+</span>
+                <p>Over 300+ clients complete high-
+                  impact projects.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end */}
+      {/* faqs */}
+      <Faqs />
+      {/* end */}
+    </>
   );
 }
