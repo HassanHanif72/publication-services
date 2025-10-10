@@ -1,6 +1,8 @@
 import Image from "next/image";
 import GlobalBtn from "./components/GlobalBtn";
 import Faqs from "./components/Faqs";
+import SectionSix from "./components/SectionSix";
+import SectionSeven from "./components/SectionSeven";
 
 export default function Home() {
   return (
@@ -140,6 +142,12 @@ export default function Home() {
       {/* end */}
       {/* faqs */}
       <Faqs />
+      {/* end */}
+      {/* sec six */}
+      <SectionSix />
+      {/* end */}
+      {/* sec seven */}
+      <SectionSeven />
       {/* end */}
     </>
   );
