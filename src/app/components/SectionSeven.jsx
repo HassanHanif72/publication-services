@@ -3,6 +3,21 @@ import Image from "next/image"
 import { Tab } from 'react-bootstrap';
 import { Tabs } from 'react-bootstrap';
 
+const tabsContent = [
+    {
+        title: 'Deep Collaboration',
+        text: 'We work side by side with your team, fostering open communication and shared accountability to ensure strategies translate into real, lasting impact.',
+    },
+    {
+        title: 'Expertise',
+        text: 'We work side by side with your team, fostering open communication and shared accountability to ensure strategies translate into real, lasting impact.',
+    },
+    {
+        title: 'Tailored Solutions',
+        text: 'We work side by side with your team, fostering open communication and shared accountability to ensure strategies translate into real, lasting impact.',
+    },
+]
+
 const SectionSeven = () => {
     return (
         <section className="sec-seven">
@@ -23,40 +38,20 @@ const SectionSeven = () => {
                                     measurable results.</p>
                             </div>
                             <div className="faqs-right-sec">
-                                <Tabs defaultActiveKey="home" id="fill-tab-example" className="mb-3">
-                                    <Tab eventKey="home" title={<><div className="dot"></div> Deep Collaboration</>}>
-                                        <div className="row align-items-start">
-                                            <div className="col-xl-12 col-lg-12 col-md-12">
-                                                <div className="tab-desc">
-                                                    <p>We work side by side with your team, fostering open communication and
-                                                        shared accountability to ensure strategies translate into real,
-                                                        lasting impact.</p>
+                                <Tabs defaultActiveKey="0" id="fill-tab-example" className="mb-3">
+                                    {
+                                        tabsContent.map((content, index) => (
+                                            <Tab key={index} eventKey={index.toString()} title={<><div className="dot"></div> {content.title}</>}>
+                                                <div className="row align-items-start">
+                                                    <div className="col-xl-12 col-lg-12 col-md-12">
+                                                        <div className="tab-desc">
+                                                            <p>{content.text}</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </Tab>
-                                    <Tab eventKey="profile" title={<><div className="dot"></div> Expertise</>}>
-                                        <div className="row align-items-start">
-                                            <div className="col-xl-12 col-lg-12 col-md-12">
-                                                <div className="tab-desc">
-                                                    <p>We work side by side with your team, fostering open communication and
-                                                        shared accountability to ensure strategies translate into real,
-                                                        lasting impact.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Tab>
-                                    <Tab eventKey="longer-tab" title={<><div className="dot"></div> Tailored Solutions</>}>
-                                        <div className="row align-items-start">
-                                            <div className="col-xl-12 col-lg-12 col-md-12">
-                                                <div className="tab-desc">
-                                                    <p>We work side by side with your team, fostering open communication and
-                                                        shared accountability to ensure strategies translate into real,
-                                                        lasting impact.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </Tab>
+                                            </Tab>
+                                        ))
+                                    }
                                 </Tabs>
                             </div>
                         </div>

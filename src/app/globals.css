@@ -626,19 +626,19 @@ header .navbar-brand {
   cursor: pointer;
 }
 
-.sec-eight .sec-eight-body {
+/* .sec-eight .sec-eight-body {
   display: flex;
   gap: 15px;
-}
+} */
 
 .sec-eight .sec-eight-body .sec-eight-col {
   position: relative;
-  margin: 0px 5px;
+  padding: 0px 5px;
 }
 
 .sec-eight .sec-eight-body .sec-eight-col img {
   border-radius: 12px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .sec-eight .sec-eight-body .sec-eight-col .sec-eight-col-inner {
@@ -825,7 +825,7 @@ header .navbar-brand {
   margin-bottom: 20px;
 }
 
-.question-answer .qa-sec h4 button {
+.question-answer .qa-sec h2 button {
   margin-bottom: 0;
   font-size: 18px;
   font-weight: 500;
@@ -837,12 +837,12 @@ header .navbar-brand {
 }
 
 .question-answer .qa-sec .accordion-button::after {
-  background-image: url(/images/plus.png);
+  background-image: url(/assets/images/plus.png);
   transform: scale(1.4) !important;
 }
 
 .question-answer .qa-sec .accordion-button:not(.collapsed)::after {
-  background-image: url(/images/minus.png);
+  background-image: url(/assets/images/minus.png);
 }
 
 .question-answer .qa-sec .accordion-body {

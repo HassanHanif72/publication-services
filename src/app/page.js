@@ -1,8 +1,12 @@
 import Image from "next/image";
 import GlobalBtn from "./components/GlobalBtn";
-import Faqs from "./components/Faqs";
+import ServiceFaqs from "./components/ServiceFaqs";
 import SectionSix from "./components/SectionSix";
 import SectionSeven from "./components/SectionSeven";
+import SliderSec from "./components/SliderSec";
+import SecNine from "./components/SecNine";
+import SecTen from "./components/SecTen";
+import Faqs from "./components/Faqs";
 
 export default function Home() {
   return (
@@ -141,13 +145,36 @@ export default function Home() {
       </section>
       {/* end */}
       {/* faqs */}
-      <Faqs />
+      <ServiceFaqs />
       {/* end */}
       {/* sec six */}
       <SectionSix />
       {/* end */}
       {/* sec seven */}
       <SectionSeven />
+      {/* end */}
+      {/* slider sec */}
+      <SliderSec />
+      {/* end */}
+      {/* sec nine */}
+      <SecNine />
+      {/* end */}
+      {/* hr */}
+      <section className="hr-sec p-0">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12 col-lg-12 col-md-12">
+              <hr />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* end */}
+      {/* sec ten */}
+      <SecTen />
+      {/* end */}
+      {/* faqs */}
+      <Faqs />
       {/* end */}
     </>
   );
