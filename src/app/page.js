@@ -7,6 +7,7 @@ import SliderSec from "./components/SliderSec";
 import SecNine from "./components/SecNine";
 import SecTen from "./components/SecTen";
 import Faqs from "./components/Faqs";
+import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -175,6 +176,9 @@ export default function Home() {
       {/* end */}
       {/* faqs */}
       <Faqs />
+      {/* end */}
+      {/* testimonials */}
+      <Testimonials />
       {/* end */}
     </>
   );

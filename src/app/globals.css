@@ -754,6 +754,7 @@ header .navbar-brand {
 
 .testimonial-body {
   margin-top: 200px;
+  position: relative;
 }
 
 .testimonial-body:before {
@@ -761,14 +762,14 @@ header .navbar-brand {
   position: absolute;
   top: -72%;
   left: 0;
-  background: url(/images/testi-bg.png) no-repeat;
+  background: url(/assets/images/testi-bg.png) no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
 }
 
 .testimonial-sec .testimonial-body .testimonial-inner {
-  margin: 0px 5px;
+  padding: 0px 5px;
 }
 
 .testimonial-sec .testimonial-body .testimonial-inner .testimonial-inner-sec {
@@ -1054,7 +1055,8 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.form-control {
+.form-control,
+.form-select {
   resize: none;
   display: block;
   width: 100%;
@@ -1068,7 +1070,8 @@ input::-webkit-inner-spin-button {
   background-color: transparent;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
   background-color: transparent;
   border-color: #1D1EE3;
   box-shadow: none !important;
