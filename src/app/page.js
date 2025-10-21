@@ -18,7 +18,7 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-xl-8 col-lg-6 col-md-8">
               <div className="right-col">
-                <h1>World's Leading Journal <span>Publication Service</span></h1>
+                <h1>World&apos;s Leading Journal <span>Publication Service</span></h1>
                 <p>Eu a pellentesque neque at. Tortor nullam placerat eget gravida scelerisque
                   consequat. A mi urna nulla aliquet erat dolor massa volutpat viverra. a pellentes.</p>
                 <GlobalBtn />
