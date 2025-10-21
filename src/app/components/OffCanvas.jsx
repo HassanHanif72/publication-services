@@ -1,10 +1,22 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { useState } from 'react'
 import { Offcanvas } from 'react-bootstrap'
 
 const OffCanvas = ({ show, handleClose }) => {
+
+    const [openDropdown, setOpenDropdown] = useState({
+        editingServices: false,
+        ourServices: false
+    });
+
+    const handleToggleDropdown = (dropdownName) => {
+        setOpenDropdown((prevState) => ({
+            ...prevState,
+            [dropdownName]: !prevState[dropdownName]
+        }));
+    };
 
     return (
         <>
@@ -20,11 +32,11 @@ const OffCanvas = ({ show, handleClose }) => {
                         <li className="nav-item">
                             <Link className="nav-link " href="#">About Us</Link>
                         </li>
-                        <li className="nav-item dropdown navdesktop">
-                            <Link className="nav-link " href="#">
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link " href="#" onClick={() => handleToggleDropdown('editingServices')}>
                                 Editing Services <i className="ri-arrow-down-s-line"></i>
                             </Link>
-                            <ul className="dropdown-menu dropdown-navdesktop" aria-labelledby="navbarDropdown">
+                            <ul className={`dropdown-menu ${openDropdown.editingServices ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                                 <li><Link className="dropdown-item" href="premium-editing">Premium Editing</Link></li>
                                 <li><Link className="dropdown-item" href="copy-editing">Copy Editing</Link></li>
                                 <li><Link className="dropdown-item" href="proofreading">Proofreading</Link></li>
@@ -33,11 +45,11 @@ const OffCanvas = ({ show, handleClose }) => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="nav-item dropdown navdesktop">
-                            <Link className="nav-link " href="#">
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link " href="#" onClick={() => handleToggleDropdown('ourServices')}>
                                 Our Services <i className="ri-arrow-down-s-line"></i>
                             </Link>
-                            <ul className="dropdown-menu dropdown-navdesktop" aria-labelledby="navbarDropdown">
+                            <ul className={`dropdown-menu ${openDropdown.ourServices ? 'show' : ''}`} aria-labelledby="navbarDropdown">
                                 <li><Link className="dropdown-item" href="publication-support">Publication Support</Link> </li>
                                 <li><Link className="dropdown-item" href="journal-selection">Journal Selection</Link></li>
                                 <li><Link className="dropdown-item" href="pre-submission-review">Pre-Submission Review</Link> </li>
