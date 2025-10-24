@@ -3,6 +3,10 @@ import { useEffect, useState } from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import OffCanvas from './OffCanvas';
+import { Modal } from 'react-bootstrap';
+import CustomModal from './Modal';
+import { consumeDynamicAccess } from 'next/dist/server/app-render/dynamic-rendering';
+
 
 const Header = () => {
     const [isSticky, setIsSticky] = useState(false);
@@ -47,6 +51,12 @@ const Header = () => {
     const [offcanvasShow, setOffcanvasShow] = useState(false);
     const handleClose = () => setOffcanvasShow(false);
     const handleShow = () => setOffcanvasShow(true);
+    // end
+
+    // modal
+    const [showModal, setShowModal] = useState(false);
+    const modalClose = () => setShowModal(false);
+    const modalShow = () => setShowModal(true)
     // end
 
     return (
@@ -110,13 +120,14 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="d-xl-block d-none">
-                            <button data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal"
+                            <button onClick={modalShow}
                                 className="btn btn-theme">Get Started <span><i className="ri-arrow-right-up-line"></i></span></button>
                         </div>
                     </div>
                 </nav>
             </header>
             <OffCanvas show={offcanvasShow} handleClose={handleClose} />
+            <CustomModal show={showModal} modalClose={modalClose} />
         </>
     )
 }

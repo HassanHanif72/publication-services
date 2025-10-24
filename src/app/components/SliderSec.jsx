@@ -8,27 +8,27 @@ import "slick-carousel/slick/slick.css";
 
 const slideContent = [
     {
-        src: '/assets/images/img-5.png',
+        src: 'assets/images/img-5.png',
         alt: 'image-1',
         text: 'Phasellus pharetra tortor Eget lacus ullamcor'
     },
     {
-        src: '/assets/images/img-6.png',
+        src: 'assets/images/img-6.png',
         alt: 'image-2',
         text: 'Phasellus pharetra tortor Eget lacus ullamcor'
     },
     {
-        src: '/assets/images/img-7.png',
+        src: 'assets/images/img-7.png',
         alt: 'image-3',
         text: 'Phasellus pharetra tortor Eget lacus ullamcor'
     },
     {
-        src: '/assets/images/img-8.png',
+        src: 'assets/images/img-8.png',
         alt: 'image-4',
         text: 'Phasellus pharetra tortor Eget lacus ullamcor'
     },
     {
-        src: '/assets/images/img-9.png',
+        src: 'assets/images/img-9.png',
         alt: 'image-4',
         text: 'Phasellus pharetra tortor Eget lacus ullamcor'
     }

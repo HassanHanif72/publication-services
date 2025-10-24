@@ -1,19 +1,25 @@
 'use client'
-import React, { useState } from 'react'
-import Form from 'react-bootstrap/Form';
+import { sendMail } from '@/lib/sendEmail';
+import { useState } from 'react'
+import { Form } from 'react-bootstrap';
 
 const TopForm = () => {
 
     const [validated, setValidated] = useState(false);
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setValidated(true);
         const form = event.currentTarget;
         if (form.checkValidity() === false) {
-            event.preventDefault();
             event.stopPropagation();
+            return;
         }
 
-        setValidated(true);
+        // form sending to email
+        const formData = new FormData(form);
+        await sendMail(formData);
+        // end
     };
 
     return (
@@ -27,24 +33,24 @@ const TopForm = () => {
                 <div className="col-md-12">
                     <div className="mb-3">
                         <Form.Label htmlFor="name">Name</Form.Label>
-                        <Form.Control required type="text" id="name" placeholder="Enter Name*" />
+                        <Form.Control required type="text" id="name" name='name' placeholder="Enter Name*" />
                     </div>
                 </div>
                 <div className="col-md-12">
                     <div className="mb-3">
-                        <Form.Label htmlFor="email">Email Address</Form.Label>
-                        <Form.Control required type="email" id="email" placeholder="Enter Email Address*" pattern="[^\s@]+@[a-zA-Z]+[^0-9@]+\.[cC][oO][mM]$" />
+                        <Form.Label htmlFor="email">Email</Form.Label>
+                        <Form.Control required type="email" id="email" name='email' placeholder="Enter Email Address*" pattern="[^\s@]+@[a-zA-Z]+[^0-9@]+\.[cC][oO][mM]$" />
                     </div>
                 </div>
                 <div className="col-md-12">
                     <div className="mb-3">
-                        <Form.Label htmlFor="contact">Contact Us</Form.Label>
-                        <Form.Control type="number" id="contact" name="contact" placeholder="Enter Phone Number*" required />
+                        <Form.Label htmlFor="contact">Contact No.</Form.Label>
+                        <Form.Control type="number" id="contact" name="phone" placeholder="Enter Phone Number*" required />
                     </div>
                 </div>
                 <div className="col-md-12">
                     <div className="mb-3">
-                        <Form.Label htmlFor="service">Select Service</Form.Label>
+                        <Form.Label htmlFor="service">Service</Form.Label>
                         <Form.Select name="service" id="service" defaultValue="" required>
                             <option value="" disabled>Select Service</option>
                             <option value="Publication Support">Publication Support</option>
